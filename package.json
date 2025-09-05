@@ -28,7 +28,7 @@
   },
   
   "scripts": {
-    "build": "vite build --output public",
+    "build": "vite build",
     "preview": "vite preview",
     "configure": "node build.js",
     "migrate": "npx knex migrate:latest",
