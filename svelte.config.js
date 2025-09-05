@@ -1,27 +1,20 @@
 import { vitePreprocess } from "@sveltejs/kit/vite";
-//import adapter from "@sveltejs/adapter-node";
-import adapter from '@sveltejs/adapter-vercel';
+import adapter from "@sveltejs/adapter-node";
+//import adapter from '@sveltejs/adapter-vercel';
 
 const basePath = !!process.env.KENER_BASE_PATH ? process.env.KENER_BASE_PATH : "";
 const VITE_BUILD_ENV = process.env.VITE_BUILD_ENV || "development"; // Default to "development"
 const isProduction = VITE_BUILD_ENV === "production";
 
-// /** @type {import('@sveltejs/kit').Config} */
-//const config = {
- // kit: {
-   // adapter: adapter(),
-    //paths: {
-      //base: basePath,
-    //},
-  //},
-
+/** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    adapter: adapter()
-  }
-};
+   adapter: adapter(),
+    paths: {
+      base: basePath,
+    },
+  },
 
-export default config;
   preprocess: [vitePreprocess({})],
 
   compilerOptions: {
