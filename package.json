@@ -26,8 +26,9 @@
     "type": "git",
     "url": "https://github.com/rajnandan1/kener.git"
   },
+  
   "scripts": {
-    "build": "vite build",
+    "build": "vite build --output public",
     "preview": "vite preview",
     "configure": "node build.js",
     "migrate": "npx knex migrate:latest",
