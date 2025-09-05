@@ -6,7 +6,7 @@ const basePath = !!process.env.KENER_BASE_PATH ? process.env.KENER_BASE_PATH : "
 const VITE_BUILD_ENV = process.env.VITE_BUILD_ENV || "development"; // Default to "development"
 const isProduction = VITE_BUILD_ENV === "production";
 
-/** @type {import('@sveltejs/kit').Config} */
+// /** @type {import('@sveltejs/kit').Config} */
 //const config = {
  // kit: {
    // adapter: adapter(),
